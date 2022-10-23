@@ -1,0 +1,32 @@
+##
+# Summary - Palindrom number generator
+# Architects - Hunter Hall
+# Developed by - Hunter Hall
+# Date - 10/21/2022
+# Initial Version - 0.1
+# Description - This algorithm takes input and lists all palindrome numbers up to input.
+# Modified by:
+# Modified date:
+# Version -
+# Description:
+#
+##
+def palindrome(num):
+    """Function list all palindrome numbers up to given input"""
+    try:
+        number = 0
+        for number in range(0, num):
+            if int(str(number)[::-1]) == number:
+                print(number)
+    except Exception as exe:
+        print("Palindrome function.1 - Error Occured " + str(exe))
+
+
+try:
+    num = int(input("Enter any number: "))
+    palindrome(num)
+    print(f"All palindrom numbers up to {num}")
+except Exception as ex:
+    print("Palindrome function.input - Error Occured " + str(ex))
+finally:
+    print("Palindrome function complete - releasing memory")
